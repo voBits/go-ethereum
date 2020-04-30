@@ -36,12 +36,16 @@
     "url": "^0.11.0",
     "url-loader": "^0.6.2",
     "webpack": "^4.0.0",
-    "webpack-dev-server": "^3.1.2"
+    "webpack-dev-server": "^3.1.2",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "stats": "webpack --profile --json > stats.json",
     "dev": "webpack-dev-server --port 8081",
-    "flow": "flow-typed install"
-  }
+    "flow": "flow-typed install",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
+  },
+  "snyk": true
 }
